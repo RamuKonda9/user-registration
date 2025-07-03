@@ -41,5 +41,5 @@ stage("test") {                       // 6  // Creates a stage named 'test'
         }                                     // 8  // Ends the 'SonarQube analysis' stage
 
     }                                         // 3  // Ends the stages block
-}                                             // 1  // Ends the pipeline block
+                                             // 1  // Ends the pipeline block
 
