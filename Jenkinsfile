@@ -1,17 +1,14 @@
-pipeline {
-    agent any
 
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World. tghis fisrt stage'
-            }
+pipeline {
+       agent any
+        environment {
+             PATH - '/opt/maven/bin : $PATH'    //Adds maven's path to system path variable
+                           }
+            stages {
+	stage('build') {
+                         steps {
+                            sh 'mvn clean install'   //runs maven clean install to build prj
+                                }
+                        }
+	}
         }
-        
-        stage('This is 2nd stage') {
-            steps {
-                echo 'This is 2nd stage'
-            }
-        }
-    }
-}
